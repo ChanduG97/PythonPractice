@@ -1,0 +1,11 @@
+list=[12,34,"grocery",["Hero","honda","Yamaha",13,34.34],"mango","Orange"]
+print("The number of items in the nexted list:",len(list))
+print(list)
+list.append("Lokesh")
+print(list)
+list.pop(5)
+print(list)
+list.insert(5,"NoName")
+print(list)
+print(list[3][2])
+print(len(list))
