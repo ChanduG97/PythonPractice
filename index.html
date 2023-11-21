@@ -1,0 +1,32 @@
+<!-- templates/index.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Relationships</title>
+</head>
+<body>
+    <h1>Organizations</h1>
+    <ul>
+        {% for org in organizations %}
+            <li>{{ org.name }}
+                <ul>
+                    {% for emp in org.employees %}
+                        <li>{{ emp.name }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h1>Employees</h1>
+    <ul>
+        {% for emp in employees %}
+            <li>{{ emp.name }} - {{ emp.organization.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
