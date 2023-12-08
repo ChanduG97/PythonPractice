@@ -25,6 +25,6 @@ def password(pw):
         print('Entered paassword is not good')
         return False   
 
-pw = input('Enter the password: ')
+pw=input('Enter the password: ')
 
 password(pw)
